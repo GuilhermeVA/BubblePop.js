@@ -1,6 +1,6 @@
 # BubblePop
 
-Um experimento interativo de Front-end, com o objetivo de praticar conceitos de javascript e css criando uma experiência relaxante de estourar bolhas enquanto demonstra conceitos de manipulação do DOM e animações CSS.
+Um experimento interativo de Front-end, com o objetivo de praticar conceitos de Javascript e CSS criando uma experiência relaxante de estourar bolhas enquanto demonstra conceitos de manipulação do DOM e animações CSS.
 
 ## 🚀 Tecnologias
 - **HTML5**: Estrutura semântica.
