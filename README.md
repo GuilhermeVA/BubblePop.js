@@ -1,4 +1,4 @@
-# 🫧 BubblePop
+# BubblePop
 
 Um experimento interativo de Front-end, com o objetivo de praticar conceitos de javascript e css criando uma experiência relaxante de estourar bolhas enquanto demonstra conceitos de manipulação do DOM e animações CSS.
 
