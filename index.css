@@ -1,0 +1,113 @@
+#minhaDiv {
+    background-color: #B4C5E4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 40px;
+    animation: flutuar 3s ease-in-out infinite;
+    display: flex;          /* Faz a div virar um container flex */
+    flex-direction: column; /* Organiza os itens (h1, form, botão) em coluna */
+    align-items: center;    /* Centraliza todos os itens horizontalmente */
+    gap: 10px;              /* Cria um espaço elegante entre o título, form e botão */
+    text-align: center;
+}
+
+#ola {
+    color: #FBFFF1;
+}
+
+#botao {
+    background-color: #3066BE;
+    color: #FBFFF1;
+    border-color: #3066BE;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;        /* Faz a "mãozinha" aparecer ao passar o mouse */
+    transition: background 0.3s; /* Suaviza a mudança de cor */
+}
+#botao:hover {
+    background-color: #254e91;
+}
+
+
+body {
+    margin: 0;                 /* Remove margens padrão do navegador */
+    height: 100vh;            /* Define a altura como 100% da altura da tela */
+    display: flex;            /* Ativa o modo Flexbox */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    background-color: #FBFFF1; /* Apenas para visualização */
+    overflow: hidden;
+}
+
+
+#contador {
+    font-weight: bold;
+    color: #3066BE; /* Mesma cor do seu botão para manter a harmonia */
+    font-size: 1.2rem;
+}
+
+
+@keyframes flutuar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.teste {
+    background-color: black;
+}
+
+.bolha {
+    position: absolute;
+    bottom: -50px;       /* Começa logo abaixo da tela */
+    background: #B4C5E4;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: subir var(--duracao) linear infinite;
+    opacity: 0;
+}
+
+/* O reflexo da bolha (opcional, mas fica lindo) */
+.bolha::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 20%;
+    height: 20%;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh) scale(1.2); /* Sobe mais que 100% da tela */
+        opacity: 0;
+    }
+}
+
+/* Classe que faremos o JS injetar no clique */
+.estourando {
+    animation: estouro 0.2s forwards !important; /* !important garante que vença a subida */
+    pointer-events: none; /* Impede cliques extras enquanto estoura */
+}
+
+@keyframes estouro {
+    from {
+        transform: translateY(var(--y-atual)) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(var(--y-atual)) scale(2); /* Aqui ela cresce! */
+        opacity: 0;
+    }
+}
