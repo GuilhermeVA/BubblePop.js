@@ -4,10 +4,7 @@ const elementoContador = document.getElementById('contador');
 const botao = document.getElementById("botao");
 botao.addEventListener("click", trocar_cor);
 
-let cores = 0;
-ordem_cores = [{"minhaDiv": "background-color"}, {"botao" : "background-color"}, {"botao": "border-color"}, {"botao:hover" : "background-color"},
-    {"botao": "color"}, {"body" : "background-color"}, {"contador" : "color"}, {"bolha" : "background-color"}
- ];
+let cor_atual = 0;
 
 const paleta_cores = [ 
     ["#B4C5E4", "#3066BE", "#3066BE",  "#254e91", "#FBFFF1", "#FBFFF1", "#3066BE", "#B4C5E4" ],
@@ -76,7 +73,7 @@ function trocar_cor(){
     botao = document.getElementById("botao");
     contador = document.getElementById("contador");
     bolha = document.getElementsByClassName("bolha");
-
+    //TO DO
 
 }
 
